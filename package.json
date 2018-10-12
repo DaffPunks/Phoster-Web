@@ -1,7 +1,7 @@
 {
-  "name": "redux-minimal",
-  "version": "1.0.0",
-  "description": "Start building complex react-redux apps today, with this minimalist easy to understand starter kit (boilerplate)",
+  "name": "roll-react",
+  "version": "0.1.0",
+  "description": "Temp name for hack application",
   "keywords": [
     "react",
     "redux",
@@ -10,11 +10,7 @@
     "boilerplate"
   ],
   "main": "index.js",
-  "homepage": "http://redux-minimal.js.org/",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/catalin-luntraru/redux-minimal"
-  },
+  "homepage": "",
   "scripts": {
     "start": "webpack-dev-server --inline --hot --history-api-fallback --host localhost --port 8088",
     "build-dev": "webpack --config webpack.dev.config.js",
@@ -29,7 +25,7 @@
       "stage-3"
     ]
   },
-  "author": "Catalin Luntraru",
+  "author": "Alex Daff & Klim",
   "license": "MIT",
   "dependencies": {
     "react": "^15.4.2",
