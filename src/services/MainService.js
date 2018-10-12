@@ -1,3 +1,6 @@
+import AuthService from "./AuthService";
+
+
 const baseUrl = 'http://localhost:8081/';
 
 export default class MainService {
@@ -11,7 +14,8 @@ export default class MainService {
   static sendGET(url, data) {
     return fetch(baseUrl + url, {
       headers: {
-        "Content-Type": "application/json; charset=utf-8"
+        "Content-Type": "application/json; charset=utf-8",
+        "Authorization": " Bearer " + AuthService.getToken()
       },
       body: JSON.stringify(data)
     })
@@ -30,6 +34,7 @@ export default class MainService {
       method: "POST",
       headers: {
         "Content-Type": "application/json; charset=utf-8",
+        "Authorization": " Bearer " + AuthService.getToken()
       },
       body: JSON.stringify(data)
     })

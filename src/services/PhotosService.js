@@ -3,25 +3,37 @@ import MainService from "./MainService";
 export default class PhotosService {
 
   static getPhotos() {
-    return MainService.sendPOST('login', {
-      username: username,
-      password: password
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve([
+          {
+            url: 'https://japan-magazine.jnto.go.jp/jnto2wm/wp-content/uploads/1608_special_TOTO_main.jpg',
+            lat: 1,
+            long: 1
+          },
+          {
+            url: 'https://japan-magazine.jnto.go.jp/jnto2wm/wp-content/uploads/1608_special_TOTO_main.jpg',
+            lat: 1,
+            long: 1
+          },
+          {
+            url: 'https://japan-magazine.jnto.go.jp/jnto2wm/wp-content/uploads/1608_special_TOTO_main.jpg',
+            lat: 1,
+            long: 1
+          },
+          {
+            url: 'https://japan-magazine.jnto.go.jp/jnto2wm/wp-content/uploads/1608_special_TOTO_main.jpg',
+            lat: 1,
+            long: 1
+          },
+          {
+            url: 'https://japan-magazine.jnto.go.jp/jnto2wm/wp-content/uploads/1608_special_TOTO_main.jpg',
+            lat: 1,
+            long: 1
+          },
+        ]);
+      }, 3000);
     });
-  }
-
-  static register(username, password) {
-    return MainService.sendPOST('register', {
-      username: username,
-      password: password
-    });
-  }
-
-  static getToken() {
-    return localStorage.getItem('token');
-  }
-
-  static setToken(token) {
-    localStorage.setItem('token', token);
   }
 
 }
