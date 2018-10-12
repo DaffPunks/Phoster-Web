@@ -40,6 +40,11 @@ module.exports = {
   devServer: {
     contentBase: __dirname + '/public',
   },
+  watchOptions: {
+    aggregateTimeout: 250,
+    poll: 50,
+    ignored: /\bnode_modules\b/
+  },
   plugins: [
     new CleanWebpackPlugin(['css/main.css', 'js/bundle.js'], {
       root: __dirname + '/public',

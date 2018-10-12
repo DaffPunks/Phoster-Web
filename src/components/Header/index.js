@@ -7,7 +7,7 @@ export default class Home extends React.Component {
   render() {
     return (
       <div className="header">
-        a
+        <div className="header-title">Название приложухи</div>
       </div>
     );
   }
