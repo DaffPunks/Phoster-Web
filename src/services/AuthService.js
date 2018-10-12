@@ -21,7 +21,7 @@ export default class AuthService {
   }
 
   static setToken(token) {
-    // localStorage.setItem('token', token);
+    localStorage.setItem('token', token);
   }
 
 }

@@ -14,9 +14,9 @@ export default class HomePage extends React.Component {
         <div className="header-component">
           <Header/>
         </div>
-       {/* <div className="empty-block">
+        <div className="empty-block">
           <Empty/>
-        </div>*/}
+        </div>
         <div className="photo-card-component">
           <PhotoCard/>
         </div>
