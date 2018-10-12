@@ -3,7 +3,7 @@ import './style.scss';
 
 // Home page component
 export default class PhotoCard extends React.Component {
-  styling = () => {
+  styling() {
     return {
       "background-image": 'url("")'
     }

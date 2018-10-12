@@ -7,7 +7,7 @@ const initialState = {
   token: ''
 };
 
-function userReducer(state = initialState, action) {
+export function userReducer(state = initialState, action) {
   switch (action.type) {
     case SET_TOKEN:
       state.isLoggedIn = true;
@@ -17,4 +17,3 @@ function userReducer(state = initialState, action) {
       return state
   }
 }
-
