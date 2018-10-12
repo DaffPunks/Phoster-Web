@@ -3,6 +3,7 @@
 var app_root = 'src'; // the app root folder: src, src_users, etc
 var path = require('path');
 var CleanWebpackPlugin = require('clean-webpack-plugin');
+var webpack = require('webpack');
 
 module.exports = {
   app_root: app_root, // the app root folder, needed by the other webpack configs
@@ -45,5 +46,6 @@ module.exports = {
       verbose: true,
       dry: false, // true for simulation
     }),
+    new webpack.HotModuleReplacementPlugin()
   ],
 };
