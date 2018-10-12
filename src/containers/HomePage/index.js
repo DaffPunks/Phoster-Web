@@ -18,22 +18,22 @@ export default class HomePage extends React.Component {
             <Empty/>
           </div>
           <div className="photo-card-component row">
-            <div className="col-6">
+            <div className="col-6 photo-card-item">
               <PhotoCard/>
             </div>
-            <div className="col-6">
+            <div className="col-6 photo-card-item">
               <PhotoCard/>
             </div>
-            <div className="col-6">
+            <div className="col-6 photo-card-item">
               <PhotoCard/>
             </div>
-            <div className="col-6">
+            <div className="col-6 photo-card-item">
               <PhotoCard/>
             </div>
-            <div className="col-6">
+            <div className="col-6 photo-card-item">
               <PhotoCard/>
             </div>
-            <div className="col-6">
+            <div className="col-6 photo-card-item">
               <PhotoCard/>
             </div>
 
