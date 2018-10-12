@@ -3,7 +3,7 @@ import './style.scss';
 import Header from '../../components/Header';
 import Empty from "../../components/Empty";
 import PhotoCard from "../../components/PhotoCard";
-import Login from "../../components/Login";
+import Login from "../../components/LoginModal";
 
 // Home page component
 export default class HomePage extends React.Component {
