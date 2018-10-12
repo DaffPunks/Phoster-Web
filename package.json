@@ -12,7 +12,7 @@
   "main": "index.js",
   "homepage": "",
   "scripts": {
-    "start": "webpack-dev-server --inline --hot --history-api-fallback --host localhost --port 8080",
+    "start": "webpack-dev-server --inline --history-api-fallback --host localhost --port 3000",
     "build-dev": "webpack --config webpack.dev.config.js",
     "build-prod": "webpack -p --config webpack.prod.config.js",
     "test": "mocha --recursive --compilers js:babel-register --require babel-polyfill --require ignore-styles",
