@@ -1,6 +1,6 @@
 {
-  "name": "roll-react",
-  "version": "0.1.0",
+  "name": "phoster",
+  "version": "0.2.0",
   "description": "Temp name for hack application",
   "keywords": [
     "react",
@@ -28,6 +28,7 @@
   "author": "Alex Daff & Klim",
   "license": "MIT",
   "dependencies": {
+    "bootstrap": "^4.0.0-alpha.6",
     "react": "^15.4.2",
     "react-bootstrap": "^0.30.7",
     "react-dom": "^15.4.2",
