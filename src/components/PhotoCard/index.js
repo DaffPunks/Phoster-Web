@@ -13,7 +13,7 @@ export default class PhotoCard extends React.Component {
   render() {
     return (
       <div className="photo-card">
-        <div style={this.styling}>asd</div>
+        <div className="photo-card-img" style={this.styling()}>GOVECKHA</div>
       </div>
     );
   }
