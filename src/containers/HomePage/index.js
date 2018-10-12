@@ -7,18 +7,6 @@ import PhotoCard from "../../components/PhotoCard";
 // Home page component
 export default class HomePage extends React.Component {
   // render
-  constructor() {
-    super();
-
-
-  }
-
-  if () {
-
-  }
-
-
-
   render() {
     return (
       <div className="page-home">

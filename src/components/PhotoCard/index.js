@@ -5,7 +5,7 @@ import './style.scss';
 export default class PhotoCard extends React.Component {
   styling() {
     return {
-      "background-image": 'url("")'
+      backgroundImage: 'url("https://japan-magazine.jnto.go.jp/jnto2wm/wp-content/uploads/1608_special_TOTO_main.jpg")'
     }
   };
 

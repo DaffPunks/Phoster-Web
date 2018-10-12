@@ -51,7 +51,7 @@ export default class LoginPage extends React.Component {
           <div className="login">
             <form onSubmit={this.handleSubmit} className="login-modal">
               <div className="login-modal-logo"/>
-              <div className="login-modal-title">Название</div>
+              <div className="login-modal-title">Phoster</div>
               <div className="login-modal-title-sub">Для того, чтобы войти, введите номер телефона.</div>
               <input
                 type="text"
