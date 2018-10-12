@@ -1,4 +1,4 @@
-import React from "react";
+    import React from "react";
 import './style.scss';
 import AuthService from "../../services/AuthService";
 import LoginModal from "../../components/LoginModal";
