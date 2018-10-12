@@ -3,6 +3,7 @@ import './style.scss';
 import Header from '../../components/Header';
 import Empty from "../../components/Empty";
 import PhotoCard from "../../components/PhotoCard";
+import Login from "../../components/Login";
 
 // Home page component
 export default class Home extends React.Component {
@@ -19,6 +20,9 @@ export default class Home extends React.Component {
         <div className="photo-card-component">
           <PhotoCard/>
         </div>
+        <div className="login-component">
+          <Login/>
+        </div>я
       </div>
     );
   }

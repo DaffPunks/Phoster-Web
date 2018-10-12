@@ -3,7 +3,7 @@ import './style.scss';
 
 // Home page component
 export default class PhotoCard extends React.Component {
-  styling = () => {
+  styling() {
     return {
       "background-image": 'url("")'
     }
@@ -13,7 +13,7 @@ export default class PhotoCard extends React.Component {
   render() {
     return (
       <div className="photo-card">
-        <div style={this.styling}>asd</div>
+        <div className="photo-card-img" style={this.styling()}>GOVECKHA</div>
       </div>
     );
   }
