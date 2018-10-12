@@ -3,7 +3,7 @@ import './style.scss';
 import Header from '../../components/Header';
 import Empty from "../../components/Empty";
 import PhotoCard from "../../components/PhotoCard";
-import Login from "../../components/Login";
+import Login from "../../components/LoginModal";
 
 // Home page component
 export default class HomePage extends React.Component {
@@ -14,9 +14,9 @@ export default class HomePage extends React.Component {
         <div className="header-component">
           <Header/>
         </div>
-       {/* <div className="empty-block">
+        <div className="empty-block">
           <Empty/>
-        </div>*/}
+        </div>
         <div className="photo-card-component">
           <PhotoCard/>
         </div>

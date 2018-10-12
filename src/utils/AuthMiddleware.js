@@ -18,7 +18,7 @@ class AuthMiddleware extends React.Component {
   }
 
   render() {
-    if (this.props.isLoggedIn) {
+    if (AuthService.getToken()) {
       return this.props.children
     } else {
       return null
