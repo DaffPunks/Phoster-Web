@@ -9,7 +9,7 @@ export default class LoginPage extends React.Component {
     super(props);
     this.state = {
       username: '',
-      password: '',
+      password: '12341234',
       loading: false
     };
 
@@ -76,13 +76,13 @@ export default class LoginPage extends React.Component {
                 value={this.state.username}
                 onChange={this.handleUsername}
               />
-              <input
+              {/*<input
                 type="password"
                 className="login-modal-enter"
                 placeholder="Password"
                 value={this.state.password}
                 onChange={this.handlePassword}
-              />
+              />*/}
               <input type="submit" value="Войти" className="login-modal-enter-btn"/>
             </form>
           </div>
