@@ -12,7 +12,7 @@ export default class PhotoCard extends React.Component {
   // render
   render() {
     return (
-      <div className="photo-card">
+      <div className="photo-card" onClick={this.props.onImageClick}>
         <div className="photo-card-img" style={this.styling()}></div>
       </div>
     );

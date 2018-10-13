@@ -24,4 +24,8 @@ export default class AuthService {
     localStorage.setItem('token', token);
   }
 
+  static deleteToken() {
+    localStorage.removeItem('token');
+  }
+
 }

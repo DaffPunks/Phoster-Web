@@ -5,9 +5,24 @@
   background-color: #FC4A1A;
   text-align: center;
   box-shadow: 0 8px 16px rgba(252, 74, 26, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
   &-title {
     font-weight: 600;
     color: white;
-    padding-top: 20px;
+    user-select: none;
+  }
+
+  &-logout {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
   }
 }

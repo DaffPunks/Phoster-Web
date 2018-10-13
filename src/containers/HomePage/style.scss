@@ -1,16 +1,20 @@
-
-h4 {
-  font-size: 200px;
-}
 .page-home{
-  min-height: 100vh;
+  min-height: calc(100vh - 100px);
 }
+
 .header-component{
   z-index: 100;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+}
+
+.loader-component {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 180px);
 }
 
 .empty-block{
@@ -22,10 +26,70 @@ h4 {
 }
 
 .photo-card-item{
-  margin-top: 10px;
-  padding-top: 10px;
+  //margin-top: 10px;
+  //padding-top: 10px;
+  padding: 20px;
+  opacity: 0;
+  transform: translateY(-10%);
 }
 .page-home-container{
-  margin-top: 80px;
+  margin-top: 100px;
   padding-bottom: 80px;
+}
+
+.single-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 110;
+}
+
+.single-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: 0.3;
+  z-index: 120;
+}
+
+.single-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 130;
+  animation: 0.4s ease-in-out slideInFromTop forwards;
+}
+
+@for $i from 0 through 6 {
+  .photo-card-item:nth-child(#{$i}) {
+    animation: 0.5s ease-in-out #{$i / 6}s 1 slideInFromLeft forwards;
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromTop {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -70%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
 }

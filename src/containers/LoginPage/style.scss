@@ -1,8 +1,12 @@
 .page-login {
   width: 100vw;
   height: 100vh;
-  background-color: #FC4A1A;;
+  //background-color: #FC4A1A;;
   position: relative;
+
+  background-image: url("/images/bg-login.png");
+  background-position: center;
+  background-size: cover;
 }
 
 .page-login-component {
@@ -19,7 +23,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    width: 320px;
+    width: 400px;
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
     border-radius: 8px;
     background-color: white;
@@ -29,8 +33,16 @@
       height: 80px;
       background-color: #FC4A1A;;
       border-radius: 1000px;
-      padding-top: 40px;
       margin-top: 30px;
+
+      &.loading img {
+        animation-name: spin;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: cubic-bezier(0.67, 0.01, 0.32, 0.99);
+
+        transition: transform 1s ease-in-out;
+      }
     }
 
     &-title{
@@ -50,7 +62,7 @@
       font-weight: 500;
     }
     &-enter{
-      width: 240px;
+      width: 80%;
       height: 40px;
       border-radius: 31px;
       border: 2px solid #E91926;
@@ -67,13 +79,21 @@
       color: white;
       text-align: center;
       background: linear-gradient(164.05deg, #F79D33 0%, #FC4A1A 100%);
-      box-shadow: 0px 6px 16px rgba(252, 74, 26, 0.6);
+      box-shadow: 0 6px 16px rgba(252, 74, 26, 0.6);
       border-radius: 31px;
       height: 40px;
       width: 140px;
       border: none;
       margin-top: 40px;
       margin-bottom: 40px;
+      cursor: pointer;
     }
+  }
+}
+
+
+@keyframes spin {
+  50% {
+    transform: rotate(720deg);
   }
 }

@@ -32,7 +32,7 @@ export default class PhotosService {
             long: 1
           },
         ]);
-      }, 3000);
+      }, 2000);
     });
   }
 

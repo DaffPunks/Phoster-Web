@@ -1,7 +1,6 @@
-    import React from "react";
+import React from "react";
 import './style.scss';
 import AuthService from "../../services/AuthService";
-import LoginModal from "../../components/LoginModal";
 
 // Home page component
 export default class LoginPage extends React.Component {
@@ -10,7 +9,8 @@ export default class LoginPage extends React.Component {
     super(props);
     this.state = {
       username: '',
-      password: ''
+      password: '',
+      loading: false
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -27,18 +27,22 @@ export default class LoginPage extends React.Component {
   }
 
   handleSubmit(event) {
+    this.setState({loading: true});
+
     event.preventDefault();
 
     AuthService.login(this.state.username, this.state.password)
       .then(json => {
         if (json.token) {
           AuthService.setToken(json.token);
-          this.props.router.push('/')
+          this.props.router.push('/');
         } else {
           this.setState({username: ''});
           this.setState({password: ''});
-          alert('Wrong username or password');
+          // alert('Wrong username or password');
+          console.log(json);
         }
+        this.setState({loading: false});
       });
 
   }
@@ -50,7 +54,9 @@ export default class LoginPage extends React.Component {
         <div className="page-login-component">
           <div className="login">
             <form onSubmit={this.handleSubmit} className="login-modal">
-              <div className="login-modal-logo"/>
+              <div className={"login-modal-logo " + (this.state.loading ? 'loading' : '')}>
+                <img src="images/logo.png" alt="Logo"/>
+              </div>
               <div className="login-modal-title">Phoster</div>
               <div className="login-modal-title-sub">Для того, чтобы войти, введите номер телефона.</div>
               <input
