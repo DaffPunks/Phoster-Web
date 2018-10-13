@@ -1,8 +1,8 @@
 import AuthService from "./AuthService";
 
 
-const baseUrl = 'http://localhost:8081/';
-// const baseUrl = 'http://phoster.herokuapp.com/api/v1/';
+// const baseUrl = 'http://localhost:8081/';
+const baseUrl = 'http://phoster.herokuapp.com/api/v1/';
 
 export default class MainService {
 
