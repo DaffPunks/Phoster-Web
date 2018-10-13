@@ -201,7 +201,12 @@ export default class PhotoSingle extends React.Component {
 
   onMapCreated(map) {
     map.setOptions({
-      styles: gmapsStyle
+      styles: gmapsStyle,
+      disableDefaultUI: true,
+      draggable: false,
+      scrollwheel: false,
+      disableDoubleClickZoom: true,
+      zoomControl: false
     });
   }
 

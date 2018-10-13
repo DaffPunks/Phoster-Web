@@ -74,7 +74,7 @@ export default class HomePage extends React.Component {
         <div className="photo-card-component row">
           {this.state.feed.map((item, index) =>
             <div key={index} className="col-md-6 col-12 photo-card-item" >
-              <PhotoCard onImageClick={this.openSingle.bind(this, item)}/>
+              <PhotoCard onImageClick={this.openSingle.bind(this, item)} image={item.url}/>
             </div>
           )}
         </div>;
@@ -84,7 +84,7 @@ export default class HomePage extends React.Component {
     if (this.state.currentPhoto)
       this.single =
         <div className="single-container">
-          <div className="single-bg"/>
+          <div className="single-bg" onClick={this.closeSingle.bind(this)}/>
           <div className="single-wrap">
             <PhotoSingle item={this.state.currentPhoto} onExitClick={this.closeSingle.bind(this)}/>
           </div>
