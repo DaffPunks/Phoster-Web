@@ -31,16 +31,26 @@ export default class LoginPage extends React.Component {
 
     event.preventDefault();
 
+    // CALLBACK HELL MAMA MIA
     AuthService.login(this.state.username, this.state.password)
       .then(json => {
         if (json.token) {
           AuthService.setToken(json.token);
           this.props.router.push('/');
         } else {
-          this.setState({username: ''});
-          this.setState({password: ''});
-          // alert('Wrong username or password');
-          console.log(json);
+          AuthService.register(this.state.username, this.state.password)
+            .then(json => {
+              if (json.token) {
+                AuthService.setToken(json.token);
+                this.props.router.push('/');
+              } else {
+                alert('Wrong Password. Bad Password!');
+              }
+            })
+            .catch(err => {
+              alert('Oiii. Something bad happens!');
+              console.log('ERR', err);
+            });
         }
         this.setState({loading: false});
       });
