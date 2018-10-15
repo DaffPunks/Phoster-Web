@@ -33,8 +33,9 @@ export default class HomePage extends React.Component {
     // Fetch shit
     PhotosService.getPhotos()
       .then((json) => {
+        console.log(json);
         this.setState({status: 1});
-        this.setState({feed: json});
+        this.setState({feed: json.photos});
       });
   }
 

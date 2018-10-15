@@ -228,16 +228,16 @@ export default class PhotoSingle extends React.Component {
               ref='Gmaps'
               width={'100%'}
               height={'100%'}
-              lat={this.props.item.lat}
-              lng={this.props.item.long}
+              lat={this.props.item.latitude}
+              lng={this.props.item.longitude}
               zoom={6}
               loadingMessage={'Be happy'}
               params={params}
               onMapCreated={this.onMapCreated}>
               >
               <Marker
-                lat={this.props.item.lat}
-                lng={this.props.item.long} />
+                lat={this.props.item.latitude}
+                lng={this.props.item.longitude} />
             </Gmaps>
             <div className="single-map-like"/>
           </div>

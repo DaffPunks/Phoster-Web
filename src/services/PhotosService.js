@@ -3,7 +3,9 @@ import MainService from "./MainService";
 export default class PhotosService {
 
   static getPhotos() {
-    return new Promise((resolve, reject) => {
+    return MainService.sendGET('private/photos');
+
+    /*return new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve([
           {
@@ -33,7 +35,12 @@ export default class PhotosService {
           },
         ]);
       }, 2000);
-    });
+    });*/
   }
+
+ /* static getPhotos() {
+    MainService.sendGET('/private/photos')
+      .then(data => console.log('JSON', data));
+  }*/
 
 }
